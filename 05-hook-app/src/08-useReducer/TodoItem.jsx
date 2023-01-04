@@ -17,12 +17,15 @@ export const TodoItem = ({ id, description, done, handleDeleteTodo, handleToggle
                     type='checkbox'
                     checked={complete}
                     id={'toggle' + id}
+                    data-testid={'toggle' + id}
                     name='complete'
                     onChange={handleToggle}
                 />
                 <label
                     className={'form-check-label' + (done ? ' text-decoration-line-through' : '')}
-                    htmlFor={'toggle' + id}>
+                    htmlFor={'toggle' + id}
+                    aria-label='checkLabel'
+                >
                     {description}
                 </label>
             </div>

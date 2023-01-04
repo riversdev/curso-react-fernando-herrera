@@ -52,5 +52,9 @@ describe('test todosReducer', () => {
         expect(newState.length).toBe(1)
         expect(newState[0].done).toBeTruthy()
         expect(newState[0].done).toBe(!initialState.done)
+
+        const newState2 = todosReducer(newState, action) // para volver a llamar un reducer solo se invoca denuevo pero con el estado de la invocacion anterior
+
+        expect(newState2[0].done).toBeFalsy()
     })
 })
