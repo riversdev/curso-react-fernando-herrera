@@ -4,7 +4,7 @@ import 'animate.css'
 export const HeroCard = ({ hero }) => {
     const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero
 
-    const heroImageUrl = `/assets/heroes/${id}.jpg`
+    const heroImageUrl = `/heroes/${id}.jpg`
 
     return (
         <div className='col'>

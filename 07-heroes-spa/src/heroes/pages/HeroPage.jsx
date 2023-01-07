@@ -7,7 +7,7 @@ export const HeroPage = () => {
     const { id } = useParams()
     const navigate = useNavigate()
     const hero = useMemo(() => getHeroById(id), [id])
-    const heroImageUrl = `/assets/heroes/${id}.jpg`
+    const heroImageUrl = `/heroes/${id}.jpg`
 
     const handleNavigateBack = () => navigate(-1)
 
