@@ -3,7 +3,6 @@ import queryString from 'query-string'
 import { useForm } from '../../hooks/useForm'
 import { getHeroesByName } from '../helpers'
 import { HeroCard } from '../components'
-import 'animate.css'
 
 const useSearch = () => {
     const navigate = useNavigate()
@@ -54,7 +53,7 @@ export const SearchPage = () => {
                             />
                             <label htmlFor='searchText'>Search a hero</label>
                         </div>
-                        <button type='submit' className='btn btn-outline-dark'>Submit</button>
+                        <button type='submit' className='btn btn-outline-dark' data-testid='submitBtn'>Submit</button>
                     </form>
                 </div>
                 <div className='col-7'>
@@ -62,8 +61,8 @@ export const SearchPage = () => {
                     <hr />
                     {
                         (q === '')
-                            ? <div className='alert alert-info animate__animated animate__fadeIn'>Search a hero</div>
-                            : (heroes.length === 0) && <div className='alert alert-danger animate__animated animate__fadeIn'>No hero with <b>{q}</b></div>
+                            ? <div className='alert alert-info animate__animated animate__fadeIn' aria-label='alertToSearch'>Search a hero</div>
+                            : (heroes.length === 0) && <div className='alert alert-danger animate__animated animate__fadeIn' aria-label='alertToNotFound'>No hero with <b>{q}</b></div>
                     }
                     <div className='row g-3'>
                         {heroes.map(hero => (

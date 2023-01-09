@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import 'animate.css'
 
 export const HeroCard = ({ hero }) => {
     const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero
