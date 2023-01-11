@@ -16,7 +16,7 @@ export const AuthLayout = ({ title = '', children }) => {
         >
             <Grid
                 item
-                className='box-shadow'
+                className='box-shadow animate__animated animate__fadeIn animate__faster'
                 // xs={12} // habilitar solo con el direction row del padre, sino ponerle un width a este
                 // sm={8}
                 // md={6}

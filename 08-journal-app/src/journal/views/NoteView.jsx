@@ -9,6 +9,7 @@ export const NoteView = () => {
             direction='row'
             justifyContent='space-between'
             alignItems='center'
+            className='box-shadow animate__animated animate__fadeIn animate__faster'
             sx={{
                 mb: 1
             }}

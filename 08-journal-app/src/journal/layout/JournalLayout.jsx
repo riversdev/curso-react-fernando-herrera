@@ -7,6 +7,7 @@ const drawerWidth = 240
 export const JournalLayout = ({ children }) => {
     return (
         <Box
+            className='box-shadow animate__animated animate__fadeIn animate__faster'
             sx={{
                 display: 'flex'
             }}
