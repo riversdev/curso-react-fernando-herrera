@@ -27,7 +27,7 @@ export const LoginPage = () => {
 
     return (
         <AuthLayout title='Login'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-testid='loginForm'>
                 <Grid container>
                     <Grid item xs={12} sx={{ mb: 2 }}>
                         <TextField
@@ -49,6 +49,9 @@ export const LoginPage = () => {
                             name='password'
                             value={password}
                             onChange={handleInputChange}
+                            inputProps={{
+                                'data-testid': 'passwordField'
+                            }}
                         />
                     </Grid>
                     <Grid container spacing={2} sx={{ mb: 2 }} >
@@ -74,6 +77,7 @@ export const LoginPage = () => {
                                 fullWidth
                                 disabled={isAuthenticating}
                                 onClick={handleGoogleSignIn}
+                                data-testid='googleBtn'
                             >
                                 <Google />
                                 <Typography sx={{ ml: 1 }} >Google</Typography>
