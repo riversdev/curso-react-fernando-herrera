@@ -1,8 +1,9 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import { authRouter } from './routes/auth.js'
 import { dbConnection } from './database/config.js'
+import { authRouter } from './routes/authRouter.js'
+import { eventsRouter } from './routes/eventsRouter.js'
 
 dotenv.config()
 
@@ -23,6 +24,7 @@ app.use(express.json())
 
 // rutas
 app.use('/api/auth', authRouter)
+app.use('/api/events', eventsRouter)
 
 // escuchando las peticiones
 app.listen(process.env.PORT, () => {
