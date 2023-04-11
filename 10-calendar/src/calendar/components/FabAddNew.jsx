@@ -12,7 +12,7 @@ export const FabAddNew = () => {
             start: new Date(),
             end: addHours(new Date(), 2),
             bgColor: '#fafafa',
-            user: { _id: '123', name: 'Alejandro' }
+            // user: { _id: '123', name: 'Alejandro' } // ya se lo estoy agregando en el useCalendarStore
         })
         startOpenDateModal()
     }
